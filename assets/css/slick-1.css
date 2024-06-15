@@ -37,17 +37,17 @@
 
  @media screen and (max-width:1440px) {
     .slide__content {
-        top: 82%;
+        top:80%;
         width: 36%;
     }
     @media screen and (max-width:1280px) {
         .slide__content {
-            top: 83%;
+            top: 80%;
             width: 40%;
         }
         @media screen and (max-width:767px) {
             .slide__content {
-                top: 73%;
+                top:65%;
                 width: 90%;
             }
         }

@@ -1113,7 +1113,7 @@ figure {
 }
 .p-main .map {
   margin: 30px auto;
-  width: 90%;
+  width: 100%;
 }
 .p-main .map .map_img {
   width: 100%;
@@ -1123,87 +1123,84 @@ figure {
   display: flex;
   width: 90%;
   margin: 0 auto;
-  align-items: flex-start;
-  justify-content: space-between;
+  gap: 20px;
 }
 @media screen and (max-width: 767px) {
   .p-main .apply {
     flex-direction: column;
+    gap: 20px;
   }
 }
 .p-main .apply .des {
-  display: flex;
-  width: 24%;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 25px;
-  padding: 15px 0;
+  width: calc(25% - 20px);
 }
 @media screen and (max-width: 1024px) {
   .p-main .apply .des {
-    width: 50%;
+    width: calc(50% - 20px);
   }
 }
-@media screen and (max-width: 1024px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .p-main .apply .des {
     width: calc(100% - 60px);
-    margin: auto;
+    margin: 0 auto;
   }
 }
 .p-main .apply .des_tlt {
-  font-size: 20px;
+  font-size: 13px;
   line-height: 25px;
+  text-align: center;
   font-weight: bold;
 }
 @media screen and (max-width: 767px) {
   .p-main .apply .des_tlt {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
-.p-main .apply .des_text {
+.p-main .apply .des .des_child {
+  height: 85%;
+  margin-top: 15px;
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
-  justify-content: center;
-  gap: 10px;
+  gap: 20px;
+  padding: 20px;
+  border: 2px rgba(135, 77, 6, 0.2352941176) solid;
+  width: 100%;
 }
-.p-main .apply .des_text .subtlt {
+.p-main .apply .des .des_child_text .subtlt {
+  margin-bottom: 20x;
   font-size: 12px;
   line-height: 20px;
 }
 @media screen and (max-width: 767px) {
-  .p-main .apply .des_text .subtlt {
+  .p-main .apply .des .des_child_text .subtlt {
     font-size: 13px;
   }
 }
-.p-main .apply .set_apply {
-  display: flex;
-  align-items: center;
-  padding: 20px 0;
-  width: 20%;
-  gap: 10px;
-  justify-content: center;
+.p-main .apply .des figure {
+  height: 100%;
 }
-@media screen and (max-width: 1024px) {
-  .p-main .apply .set_apply {
-    width: 40%;
-    padding: 15px;
-  }
-}
-@media screen and (max-width: 1024px) and (max-width: 767px) {
-  .p-main .apply .set_apply {
-    width: calc(100% - 160px);
-    margin: auto;
-    gap: 15px;
-  }
+.p-main .apply .des figure img {
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 .p-main .img_des_1 {
   display: flex;
   height: 65vh;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1440px) {
   .p-main .img_des_1 {
-    flex-direction: column;
+    height: 90vh;
+  }
+}
+@media screen and (max-width: 1440px) and (max-width: 1024px) {
+  .p-main .img_des_1 {
+    height: 80vh;
+  }
+}
+@media screen and (max-width: 1440px) and (max-width: 1024px) and (max-width: 767px) {
+  .p-main .img_des_1 {
+    flex-direction: column-reverse;
     height: 100%;
   }
 }
@@ -1218,7 +1215,7 @@ figure {
   }
 }
 .p-main .img_des_1_text {
-  padding: 30px 75px 30px 75px;
+  padding: 30px 100px 30px 100px;
   display: flex;
   width: 50%;
   flex-direction: column;
@@ -1240,8 +1237,8 @@ figure {
 }
 .p-main .img_des_1_text .tlt {
   margin: 0 auto;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 22px;
+  line-height: 30px;
   text-align: center;
 }
 @media screen and (max-width: 767px) {
@@ -1263,7 +1260,17 @@ figure {
   display: flex;
   height: 65vh;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1440px) {
+  .p-main .img_des_2 {
+    height: 90vh;
+  }
+}
+@media screen and (max-width: 1440px) and (max-width: 1024px) {
+  .p-main .img_des_2 {
+    height: 80vh;
+  }
+}
+@media screen and (max-width: 1440px) and (max-width: 1024px) and (max-width: 767px) {
   .p-main .img_des_2 {
     flex-direction: column-reverse;
     height: 100%;
@@ -1281,7 +1288,7 @@ figure {
 }
 .p-main .img_des_2_text {
   width: 50%;
-  padding: 30px 75px 30px 75px;
+  padding: 30px 100px 30px 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1302,8 +1309,8 @@ figure {
 }
 .p-main .img_des_2_text .tlt {
   margin: 0 auto;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 22px;
+  line-height: 30px;
   text-align: center;
 }
 @media screen and (max-width: 767px) {
@@ -1410,4 +1417,8 @@ figure {
   .space_food {
     margin-top: 20px;
   }
+}
+
+.apply_3 {
+  padding: 50px 0;
 }/*# sourceMappingURL=style.css.map */

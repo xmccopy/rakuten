@@ -521,7 +521,7 @@
 
   .map {
     margin: 30px auto;
-    width: 90%;
+    width: 100%;
     .map_img {
       width: 100%;
       height: 300px;
@@ -532,89 +532,87 @@
     display: flex;
     width: 90%;
     margin: 0 auto;
-    align-items: flex-start;
-    justify-content: space-between;
+    gap: 20px;
 
     @include media-sp {
       flex-direction: column;
+      gap: 20px;
     }
 
     .des {
-      display: flex;
-      width: 24%;
-      align-items: flex-start;
-      flex-direction: column;
-      gap: 25px;
-      padding: 15px 0;
-
+      width: calc(25% - 20px);
 
       @include media-pc {
-        width: 50%;
+        width: calc(50% - 20px);
 
-        @include media-sp {
-          width: calc(100% - 60px);
-          margin: auto;
-        }
+      }
+      @include media-sp {
+        width: calc(100% - 60px);
+        margin: 0 auto;
       }
 
       &_tlt {
-        font-size: 20px;
+        font-size: 13px;
         line-height: 25px;
+        text-align: center;
         font-weight: bold;
 
         @include media-sp {
-          font-size: 18px;
+          font-size: 16px;
         }
       }
 
-      &_text {
+      .des_child {
+        height: 85%;
+        margin-top: 15px;
         display: flex;
-        align-items: flex-start;
         flex-direction: column;
-        justify-content: center;
-        gap: 10px;
+        gap: 20px;
+        padding: 20px;
+        border: 2px #874d063c solid;
+        width: 100%;
+        
 
-        .subtlt {
-          font-size: 12px;
-          line-height: 20px;
-
-          @include media-sp {
-            font-size: 13px;
+        &_text {
+          .subtlt {
+            margin-bottom: 20x;
+            font-size: 12px;
+            line-height: 20px;
+  
+            @include media-sp {
+              font-size: 13px;
+            }
           }
         }
       }
-    }
-
-    .set_apply {
-      display: flex;
-      align-items: center;
-      padding: 20px 0;
-      width: 20%;
-      gap: 10px;
-      justify-content: center;
-
-      @include media-pc {
-        width: 40%;
-        padding: 15px;
-
-        @include media-sp {
-          width: calc(100% - 160px);
-          margin: auto;
-          gap: 15px;
+      figure {
+        height: 100%;
+        img {
+          width: 100%;
+          object-fit: fill;
         }
       }
     }
+
   }
+
 
   //food
   .img_des_1 {
     display: flex;
     height: 65vh;
 
-    @include media-sp {
-      flex-direction: column;
-      height: 100%;
+    @include media-pc-m {
+      height: 90vh;
+      @include media-pc {
+        height: 80vh;
+        @include media-sp {
+          flex-direction: column-reverse;
+          height: 100%;
+        }
+      }
     }
+    
 
     &_image {
       width: 50%;
@@ -627,7 +625,7 @@
     }
 
     &_text {
-      padding: 30px 75px 30px 75px;
+      padding: 30px 100px 30px 100px;
       display: flex;
       width: 50%;
       flex-direction: column;
@@ -647,8 +645,8 @@
 
       .tlt {
         margin: 0 auto;
-        font-size: 20px;
-        line-height: 25px;
+        font-size:22px;
+        line-height: 30px;
         text-align: center;
 
         @include media-sp {
@@ -671,11 +669,17 @@
   .img_des_2 {
     display: flex;
     height: 65vh;
-
-    @include media-sp {
-      flex-direction: column-reverse;
-      height: 100%;
+    @include media-pc-m {
+      height: 90vh;
+      @include media-pc {
+        height: 80vh;
+        @include media-sp {
+          flex-direction: column-reverse;
+          height: 100%;
+        }
+      }
     }
+
 
 
 
@@ -691,7 +695,7 @@
 
     &_text {
       width: 50%;
-      padding: 30px 75px 30px 75px;
+      padding: 30px 100px 30px 100px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -711,8 +715,8 @@
 
       .tlt {
         margin: 0 auto;
-        font-size: 20px;
-        line-height: 25px;
+        font-size: 22px;
+        line-height: 30px;
         text-align: center;
 
         @include media-sp {
@@ -826,4 +830,8 @@
   @include media-sp {
     margin-top: 20px;
   }
+}
+
+.apply_3 {
+  padding: 50px 0;
 }
